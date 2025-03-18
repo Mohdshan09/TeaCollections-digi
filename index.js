@@ -1,4 +1,5 @@
 import express from "express";
+import "dotenv/config";
 
 const app = express();
 
@@ -6,7 +7,7 @@ const app = express();
 app.use(express.json());
 
 //portNumber
-const port = 8080;
+const port = 8080 || process.env.PORT;
 
 let teaData = [];
 let nextId = 1;
